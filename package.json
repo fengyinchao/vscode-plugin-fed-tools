@@ -6,7 +6,8 @@
   "main": "dist/src/index.js",
   "publisher": "fengyinchao",
   "engines": {
-    "vscode": "^1.29.0"
+    "vscode": "^1.29.0",
+    "node": "16.x"
   },
   "categories": [
     "Other"
@@ -15,23 +16,24 @@
     "*"
   ],
   "contributes": {
-		"commands": [
-			{
-				"command": "Generate.component.h5.ts",
-				"title": "生成H5组件模版-TS"
-			}
-		],
-		"menus": {
-			"explorer/context": [
-				{
-					"command": "Generate.component.h5.ts",
-					"when": "explorerResourceIsFolder",
-					"group": "EditorConfig@1"
-				}
-			]
-		}
-	},
+    "commands": [
+      {
+        "command": "Generate.component.h5.ts",
+        "title": "生成H5组件模版-TS"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "Generate.component.h5.ts",
+          "when": "explorerResourceIsFolder",
+          "group": "EditorConfig@1"
+        }
+      ]
+    }
+  },
   "scripts": {
+    "preinstall": "only-allow yarn",
     "start": "ts-node src/index.ts",
     "build": "tsc -p tsconfig.app.json",
     "release": "standard-version"
@@ -75,6 +77,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "husky": "4.3.0",
     "lint-staged": "10.4.0",
+    "only-allow": "1.1.1",
     "prettier": "2.1.2",
     "ts-node": "10.9.1",
     "typescript": "4.0.3",
