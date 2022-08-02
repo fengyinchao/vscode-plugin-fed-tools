@@ -14,7 +14,7 @@ export function generate() {
 
   vscode.window
     .showInputBox({
-      placeHolder: '请输入文件夹名称',
+      placeHolder: '请输入文件夹名称（ex：aaBB、aa-bb）',
     })
     .then(folderName => {
       const folderNames = folderName.split('-');
@@ -69,11 +69,9 @@ export function generate() {
                   return;
                 }
 
-                vscode.window.showInformationMessage('Create Success');
+                vscode.window.showInformationMessage('Success');
               },
             );
-
-            vscode.window.showInformationMessage('Success!!!');
           });
         });
       });
