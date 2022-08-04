@@ -6,9 +6,10 @@
   "main": "dist/src/index.js",
   "publisher": "fengyinchao",
   "engines": {
-    "vscode": "^1.29.0",
+    "vscode": "^1.64.0",
     "node": "16.x"
   },
+  "icon": "dist/fast.png",
   "categories": [
     "Other"
   ],
@@ -20,6 +21,11 @@
       {
         "command": "Generate.component.h5.ts",
         "title": "生成H5组件模版-TS"
+      },
+      {
+        "command": "fed-tools.showFedStandardConfigPanel",
+        "category": "showFedStandardConfigPanel",
+        "title": "showFedStandardConfigPanel"
       }
     ],
     "menus": {
@@ -30,12 +36,30 @@
           "group": "EditorConfig@1"
         }
       ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "douyu-fed",
+          "title": "斗鱼FED",
+          "icon": "./dist/fast.png"
+        }
+      ]
+    },
+    "views": {
+      "douyu-fed": [
+        {
+          "type": "webview",
+          "id": "douyu-fed-codegen",
+          "name": "项目生成器"
+        }
+      ]
     }
   },
   "scripts": {
     "preinstall": "only-allow yarn",
     "start": "ts-node src/index.ts",
-    "build": "tsc -p tsconfig.app.json",
+    "build": "tsc -p tsconfig.app.json && cp  src/*.png dist && cp -r src/gen-project/pages dist/src/gen-project",
     "release": "standard-version"
   },
   "husky": {
@@ -50,7 +74,6 @@
       "prettier --write"
     ],
     "*.{css,scss}": [
-      "stylelint",
       "prettier --write"
     ],
     "*.html": [
@@ -58,8 +81,7 @@
     ]
   },
   "dependencies": {
-    "tslib": "2.0.2",
-    "vscode": "1.1.37"
+    "tslib": "2.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "9.1.2",
@@ -67,6 +89,7 @@
     "@types/node": "12.12.62",
     "@typescript-eslint/eslint-plugin": "4.4.0",
     "@typescript-eslint/parser": "4.4.0",
+    "@types/vscode": "^1.64.0",
     "commitizen": "4.2.1",
     "concurrently": "5.3.0",
     "cross-env": "7.0.2",
