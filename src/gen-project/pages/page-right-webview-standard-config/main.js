@@ -1,3 +1,9 @@
+/*
+ * @description:
+ * @author: Feng Yinchao
+ * @Date: 2022-08-04 12:46:14
+ */
+/* eslint-disable no-undef */
 /* eslint-disable no-console */
 /* eslint-disable wrap-iife */
 (function () {
@@ -11,38 +17,46 @@
       case 'addColor': {
         break;
       }
+      default:
+        break;
     }
   });
   // eslint-disable-next-line no-undef, object-curly-newline
-  const { Button, Form, Input, Alert } = tiny;
+  const { Button, Form, Radio } = tiny;
 
-  const Wrapper = () => {
-    // eslint-disable-next-line no-undef
-    const [visible, setVisible] = React.useState(false);
-    const onClick = () => {
-      vscode.postMessage({ type: 'generate-project' });
-      setVisible(true);
-    };
-    return (
-      <div style={{ backgroundColor: '#fff', width: '100%', height: '100%' }}>
-        {visible && <Alert closeText="知道了">敬请期待</Alert>}
-        <Form
-          onFinish={(values) => console.log(values)}
-          onFinishFailed={({ values, errors }) => console.log(values, errors)}
-          style={{ maxWidth: 500 }}
-        >
-          <Form.Item label="项目名称" name="number" rules={[{ max: 10 }]}>
-            <Input placeholder="输入项目名称，如 dyrnchannel" />
-          </Form.Item>
-          <Form.Item>
-            <Button size="sm" btnType="primary" onClick={onClick}>
-              创建 RN 页面项目
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
-    );
-  };
+  const Wrapper = () => (
+    <div style={{ backgroundColor: '#fff', width: '100%', height: '100%' }}>
+      <Form
+        onFinish={(values) => {
+          vscode.postMessage({ type: 'generate-fed-standard-config', data: values });
+        }}
+        onFinishFailed={({ values, errors }) => console.log(values, errors)}
+        style={{ maxWidth: 800 }}
+      >
+        <Form.Item label="项目类型" name="type" rules={[{ required: true }]}>
+          <Radio.Group>
+            <Radio value="React">React</Radio>
+            <Radio value="RN">ReactNative</Radio>
+            <Radio value="Node">Node</Radio>
+            <Radio value="Vue">Vue</Radio>
+          </Radio.Group>
+        </Form.Item>
+
+        <Form.Item label="项目语言" name="language" rules={[{ required: true }]}>
+          <Radio.Group>
+            <Radio value="JS">JS</Radio>
+            <Radio value="TS">TS</Radio>
+          </Radio.Group>
+        </Form.Item>
+
+        <Form.Item>
+          <Button block btnType="primary" type="submit">
+            确定
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
+  );
 
   // eslint-disable-next-line no-undef
   ReactDOM.render(<Wrapper></Wrapper>, document.getElementById('root'));

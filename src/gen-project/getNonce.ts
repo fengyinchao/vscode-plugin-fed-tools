@@ -1,9 +1,8 @@
 /*
- * @Description:getNonce
- * @Author: Feng Yinchao
- * @Date: 2022-04-22 17:06:40
+ * @description:
+ * @author: Feng Yinchao
+ * @Date: 2022-08-04 12:46:14
  */
-
 export default function getNonce() {
   let text = '';
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
