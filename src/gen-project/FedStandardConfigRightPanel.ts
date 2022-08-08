@@ -84,11 +84,6 @@ export class FedStandardConfigRightPanel {
 
     const targetTemplatePath = path.resolve(workspaceUrl, 'node_modules', '@shark/eslint-config-fed');
 
-    if (!targetTemplatePath) {
-      vscode.window.showErrorMessage('未找到 @shark/eslint-config-fed 包，请安装该包');
-      return;
-    }
-
     // Listen for when the panel is disposed
     // This happens when the user closes the panel or when the panel is closed programmatically
     this._panel.onDidDispose(() => this.dispose(), null, this._disposables);
@@ -100,6 +95,12 @@ export class FedStandardConfigRightPanel {
 
         switch (message.type) {
           case 'generate-fed-standard-config':
+            if (!fs.existsSync(targetTemplatePath)) {
+              vscode.window.showErrorMessage(
+                '未找到 @shark/eslint-config-fed 包，请先在本项目下安装该包后重试 yarn @shark/eslint-config-fed -D',
+              );
+              return;
+            }
             let outProgress = null;
             let outResolve = null;
             vscode.window.withProgress(
