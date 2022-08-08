@@ -153,6 +153,7 @@ export class FedStandardConfigRightPanel {
         : '"@shark/eslint-config-fed/typescript-base"'
     },
     ${data.type === 'React' ? '"@shark/eslint-config-fed/react",' : ''}
+    ${data.type === 'RN' ? '"@shark/eslint-config-fed/react",' : ''}
     ${data.type === 'RN' ? '"@shark/eslint-config-fed/rn",' : ''}
     ${data.type === 'Vue' ? '"@shark/eslint-config-fed/vue",' : ''}
     ${data.type === 'Node' ? '"@shark/eslint-config-fed/node",' : ''}
@@ -202,7 +203,7 @@ export class FedStandardConfigRightPanel {
               if (data.type !== 'Node') {
                 delete deps['eslint-plugin-node'];
               }
-              if (data.type !== 'React') {
+              if (data.type !== 'React' && data.type !== 'RN') {
                 delete deps['eslint-plugin-react'];
                 delete deps['eslint-plugin-react-hooks'];
               }
