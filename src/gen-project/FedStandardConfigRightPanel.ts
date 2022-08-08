@@ -97,7 +97,7 @@ export class FedStandardConfigRightPanel {
           case 'generate-fed-standard-config':
             if (!fs.existsSync(targetTemplatePath)) {
               vscode.window.showErrorMessage(
-                '未找到 @shark/eslint-config-fed 包，请先在本项目下安装该包后重试 yarn @shark/eslint-config-fed -D',
+                '未找到 @shark/eslint-config-fed 包，请先在本项目下安装该包后重试 yarn add @shark/eslint-config-fed -D',
               );
               return;
             }
