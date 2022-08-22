@@ -3,7 +3,7 @@
  * @author: Feng Yinchao
  * @Date: 2022-08-22 11:12:38
  */
-// eslint-disable-next-line import/no-unresolved
+
 import * as vscode from 'vscode';
 import fs from 'fs';
 import path from 'path';

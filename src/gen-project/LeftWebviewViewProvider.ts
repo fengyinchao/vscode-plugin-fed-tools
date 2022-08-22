@@ -3,7 +3,6 @@
  * @author: Feng Yinchao
  * @Date: 2022-02-11 13:51:09
  */
-// eslint-disable-next-line import/no-unresolved
 import * as vscode from 'vscode';
 import getNonce from './getNonce';
 import { FedStandardConfigRightPanel } from './FedStandardConfigRightPanel';

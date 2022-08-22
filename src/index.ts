@@ -3,7 +3,7 @@
  * @author: Feng Yinchao
  * @Date: 2022-08-02 10:17:42
  */
-// eslint-disable-next-line import/no-unresolved
+
 import * as vscode from 'vscode';
 import LeftWebviewViewProvider from './gen-project/LeftWebviewViewProvider';
 import { FedStandardConfigRightPanel } from './gen-project/FedStandardConfigRightPanel';
@@ -24,9 +24,9 @@ function activate(context) {
     }),
   );
 }
-exports.activate = activate;
+module.exports.activate = activate;
 
 // this method is called when your extension is deactivated
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 function deactivate() {}
-exports.deactivate = deactivate;
+module.exports.deactivate = deactivate;
