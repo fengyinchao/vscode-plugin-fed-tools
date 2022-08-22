@@ -1,8 +1,14 @@
+/*
+ * @description: H5 生成模板
+ * @author: Feng Yinchao
+ * @Date: 2022-08-22 11:12:38
+ */
+// eslint-disable-next-line import/no-unresolved
 import * as vscode from 'vscode';
 import fs from 'fs';
 import path from 'path';
 
-export function generate() {
+export default function generate() {
   // from uri to get url,node's fs need the type of url
   const workspaceUri = vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders[0].uri;
   const workspaceUrl = workspaceUri.fsPath;
@@ -25,9 +31,7 @@ export function generate() {
 
         return;
       }
-      const camelFolderName = folderNames
-        .map((n) => (!!n ? n[0].toUpperCase() + n.substring(1, n.length) : ''))
-        .join('');
+      const camelFolderName = folderNames.map((n) => (n ? n[0].toUpperCase() + n.substring(1, n.length) : '')).join('');
 
       fs.mkdir(path.resolve(workspaceUrl, folderName), (err) => {
         if (err) {
@@ -64,9 +68,9 @@ export function generate() {
             fs.writeFile(
               path.resolve(fileDirPath, 'index.ts'),
               `import ${camelFolderName} from "./${camelFolderName}.ts";\n\nexport default ${camelFolderName};\n`,
-              (fileError) => {
-                if (fileError) {
-                  vscode.window.showErrorMessage(fileError.message);
+              (fileError2) => {
+                if (fileError2) {
+                  vscode.window.showErrorMessage(fileError2.message);
 
                   return;
                 }
