@@ -1,0 +1,414 @@
+{
+  "DYModal": {
+    "prefix": "dy-modal",
+    "body": [
+      "<DYModal",
+      "            title={PopTitile}",
+      "            popup",
+      "            onClose={this.closePop}",
+      "            maskClosable",
+      "            visible={this.state.popVisible}",
+      "            closable",
+      "            style={{ backgroundColor: '#ffffff', p…orderTopLeftRadius: 7, borderTopRightRadius: 7 }}",
+      "            animationType=\"slide-up\"",
+      "          >",
+      "            <View style={{ padding: 20, backgroundColor: '#ffffff' }}>",
+      "              <Text style={{ textAlign: 'left', fo…m: 20 }}>当前仅支持有赞/小电铺订单查看，其余订单请在对应第三方平台进行查询</Text>",
+      "              <DYButton type='primary' containerSt…, alignSelf: 'center' }} onPress={this.closePop}>",
+      "                知道了",
+      "              </DYButton>",
+      "            </View>",
+      "          </DYModal>"
+    ],
+    "description": "DYModal 需要被 DYModal.Provider 包裹"
+  },
+  "DYCard": {
+    "prefix": "dy-card",
+    "body": [
+      "<DYCard style={{ margin: 20 }}>",
+      "          <DYCard.CardHeader ",
+      "            title=\"标题\"",
+      "            extra={<Text>附属内容</Text>}",
+      "          />",
+      "          <DYCard.CardBody>",
+      "            <Text>22222222</Text>",
+      "          </DYCard.CardBody>",
+      "          <DYCard.CardFooter extraStyle={{ fontSize: 16 }} extra=\"88.8888\" />",
+      "        </DYCard>"
+    ],
+    "description": "DYCard"
+  },
+  "DYMosaicView": {
+    "prefix": "dy-mosaicview",
+    "body": [
+      "<DYMosaicView",
+      "          style={styles.mosaic}",
+      "          originImageUrl={originUrl}",
+      "          mosaicImageUrl={maskUrl}",
+      "          onTouchStart={this._onTouchStart}",
+      "          onTouchEnd={this._onTouchEnd}",
+      "        />",
+      ""
+    ],
+    "description": "DYMosaicView"
+  },
+  "DYAccordion": {
+    "prefix": "dy-accordion",
+    "body": [
+      "<DYAccordion",
+      "          style={{marginTop: 20}}",
+      "          dataArray={dataArray}",
+      "          expanded={1}",
+      "          titleStyle={{color: 'blue'}}",
+      "          contentStyle={{color: 'green'}}",
+      "          headerStyle={{backgroundColor: 'gray'}}",
+      "          expandedIcon={require('./image/fold.png')}",
+      "          expandedIconStyle={{tintColor: 'blue'}}",
+      "          icon={require('./image/unfold.png')}",
+      "          iconStyle={{tintColor: 'blue'}}",
+      "          onAccordionClose={(item, index) => {console.log(JSON.stringify(item), index);}}",
+      "          onAccordionOpen={(item, index) => {console.log(JSON.stringify(item), index);}}",
+      "        />"
+    ],
+    "description": "DYAccordion"
+  },
+  "DYDrawer": {
+    "prefix": "dy-drawer",
+    "body": [
+      " <DYDrawer",
+      "        onDrawerSlide={e =>",
+      "          this.setState({drawerSlideOutput: JSON.stringify(e.nativeEvent)})}",
+      "        onDrawerStateChanged={e =>",
+      "          this.setState({drawerStateChangedOutput: JSON.stringify(e)})}",
+      "        drawerBackgroundColor=\"#F5F4F5\"",
+      "        drawerWidth={300}",
+      "        ref={drawer => {",
+      "          this.drawer = drawer;",
+      "        }}",
+      "        keyboardDismissMode=\"on-drag\"",
+      "        renderNavigationView={() => navigationView}",
+      "      >",
+      "          <TouchableOpacity onPress={() => this.drawer.openDrawer()} style={styles.button}>",
+      "            <Text style={styles.text}>打开</Text>",
+      "          </TouchableOpacity>",
+      "      </DYDrawer>"
+    ],
+    "description": "DYDrawer 6350 接入"
+  },
+  "DYStepper": {
+    "prefix": "dy-stepper",
+    "body": ["<DYStepper onChange={count => {this.setState({value: count});}} />"],
+    "description": "DYStepper"
+  },
+  "DYBadge": {
+    "prefix": "dy-badge",
+    "body": ["<DYBadge text=\"游戏\" style={{marginLeft: 30}} size={20} />"],
+    "description": "DYBadge"
+  },
+  "DYSlider": {
+    "prefix": "dy-slider",
+    "body": [
+      "<DYSlider",
+      "            value={value}",
+      "            onValueChange={(data) => this.setState({ value: data })}",
+      "            minimumTrackTintColor=\"red\"",
+      "            maximumTrackTintColor=\"green\"",
+      "            maximumValue={50}",
+      "            minimumValue={20}",
+      "            thumbTintColor=\"purple\"",
+      "          />"
+    ],
+    "description": "DYSlider"
+  },
+  "DYSearchBar": {
+    "prefix": "dy-searchbar",
+    "body": [
+      "<DYSearchBar",
+      "            style={{width: '100%', height: 30, backgroundColor: '#ffffff'}}",
+      "            placeholder=\"搜索点什么吧\"",
+      "            returnKeyType=\"send\"",
+      "            onSubmit={this._onSubmit}",
+      "            onCancle={this._onCancle}",
+      "            onChangeText={this._onChangeText}",
+      "          />"
+    ],
+    "description": "DYSearchBar 6350 接入"
+  },
+  "DYCheckBox": {
+    "prefix": "dy-checkbox",
+    "body": ["YCheckBox onPress={this._handlePress} style={{marg…checkedIcon={require('./image/unchecked.png')} />"],
+    "description": "DYCheckBox"
+  },
+  "DYFadeView": {
+    "prefix": "dy-fadeview",
+    "body": [
+      "<DYFadeView style={{marginTop: 20}} fadeInTime={2000} fadeOutTime={0}>",
+      "          <Text style={{fontSize: 16}}>渐现文本</Text>",
+      "        </DYFadeView>"
+    ],
+    "description": "DYFadeView 6350 接入"
+  },
+  "DYCollapsible": {
+    "prefix": "dy-collapsible",
+    "body": [
+      "<DYCollapsible collapsed={collapsed} align=\"bottom\">",
+      "         <View style={styles.content}>",
+      "           <Text>",
+      "             一段文本一段文本一段文本一段文本一段文本一段文本一段文本一段文本一段文本一段文本",
+      "           </Text>",
+      "         </View>",
+      "       </DYCollapsible>"
+    ],
+    "description": "DYCollapsible"
+  },
+  "DYPopupMenu": {
+    "prefix": "dy-popupmenu",
+    "body": [
+      "<DYPopupMenu ref={this.menuRef} style={styles.menu}>",
+      "    {/* 菜单内容包括背景图 */}",
+      "    <View style={styles.menuItem}>",
+      "      <Text style={styles.menuItemText}>菜单项1</Text>",
+      "    </View>",
+      "    <View style={styles.menuItem}>",
+      "      <Text style={styles.menuItemText}>菜单项2</Text>",
+      "    </View>",
+      "    <View style={styles.menuItem}>",
+      "      <Text style={styles.menuItemText}>菜单项3</Text>",
+      "    </View>",
+      "  </DYPopupMenu>"
+    ],
+    "description": "DYPopupMenu 6330开始支持"
+  },
+  "DYLoadingIndicator": {
+    "prefix": "dy-loading-indicator",
+    "body": ["<DYLoadingIndicator style={styles.indicator1} hori…conStyle1} messageStyle={styles.messageStyle1} />"],
+    "description": "DYLoadingIndicator 6310开始支持"
+  },
+  "DYCircularProgressBar": {
+    "prefix": "dy-circular-progress-bar",
+    "body": [
+      "<DYCircularProgressBar style={styles.circularProgr…edColor=\"#bcbcbc\" color=\"#ff7200\" thickness={10}>",
+      "         <Text>{progress}%</Text>",
+      "       </DYCircularProgressBar>"
+    ],
+    "description": "DYCircularProgressBar 6310开始支持"
+  },
+  "DYHorizontalProgressBar": {
+    "prefix": "dy-horizontal-progress-bar",
+    "body": [
+      "<DYHorizontalProgressBar style={styles.horizontalProgress} barStyle={styles.barStyle} progress={progress} />"
+    ],
+    "description": "DYHorizontalProgressBar 6310开始支持"
+  },
+  "DYMarqueeView": {
+    "prefix": "dy-marqueeview",
+    "body": ["<DYMarqueeView speed={100} itemSpace={100} style={…ata={dataSingle} renderItem={this._renderItem} />"],
+    "description": "DYMarqueeView"
+  },
+  "DYTimer": {
+    "prefix": "dy-timer",
+    "body": ["DYTimer.setTimeout()"],
+    "description": "DYTimer"
+  },
+  "DYSegmentTab": {
+    "prefix": "dy-segmenttab",
+    "body": [
+      "<DYSegmentTab",
+      "selectedIndex={ 0}",
+      "onTabPress={this.onTabSelected}",
+      "tabStyle={styles.tabStyle}",
+      "tabTextStyle={styles.tabTextStyle}",
+      "activeTabTextStyle={styles.activeTabTextStyle}",
+      "activeTabStyle={styles.activeTabStyle}",
+      "values={['国内', '海外']}/>"
+    ],
+    "description": "DYSegmentTab"
+  },
+  "DYArrow": {
+    "prefix": "dy-arrow",
+    "body": ["<DYArrow orientation='left' size={25} color='gray'/>"],
+    "description": "DYArrow"
+  },
+  "DYImagePicker": {
+    "prefix": "dy-imagepicker",
+    "body": [
+      "<DYImagePicker",
+      "  ref='DYImagePicker'",
+      "  options = { {quality: 1.0, maxWidth: 500, maxHeight: 500, storageOptions: {skipBackup: true}} }",
+      "  onPhotoChoosed={this.onPhotoChoosed} marginTop={44}/>"
+    ],
+    "description": "DYImagePicker"
+  },
+  "DYToast": {
+    "prefix": "dy-toast",
+    "body": ["Toast.show('反馈成功') "],
+    "description": "DYToast"
+  },
+  "DYVideo": {
+    "prefix": "dy-video",
+    "body": [
+      "<DYVideo",
+      "          style={{width: '100%', aspectRatio: 16/9 }}",
+      "          source={{vid: 'Bjq4MeDX31Q75Ea8'}}",
+      "          showLoading",
+      "          showProgressBar",
+      "          showErrorView",
+      "          paused={false}",
+      "          onProgress={() => {}}",
+      "          onStateChange={() => {}}",
+      "        />"
+    ],
+    "description": "DYVideo"
+  },
+  "DYTextInput": {
+    "prefix": "dy-textinput",
+    "body": [
+      "<DYTextInput containerStyle={{ marginLeft: 50, wid…orderColor: '#123456', backgroundColor: 'white'}}",
+      "          clearButtonMode='while-editing'",
+      "          leftIcon={require('./test.png')}",
+      "          keyboardType={'numeric'}",
+      "          onChangeText={this._onSmgAuthCodeTextInputChange}",
+      "          placeholder={'请输入验证码'}",
+      "          placeholderTextColor='#999999'",
+      "          style={{marginLeft: 10}}/>"
+    ],
+    "description": "DYTextInput"
+  },
+  "DYRefreshHeader": {
+    "prefix": "dy-refreshheader",
+    "body": [
+      "<LargeList",
+      "            ref={node => (this.largelistDom = node)}",
+      "            style={styles.AllInformationListScroll}",
+      "            data={newDataList}",
+      "            heightForIndexPath={this._heightForIndexPath}",
+      "            renderIndexPath={this._renderIndexPath}",
+      "            refreshHeader={DYRefreshHeader}",
+      "            onRefresh={this._onRefresh}",
+      "            loadingFooter={LargeListFooter}",
+      "            allLoaded={isAllLoaded}",
+      "            onLoading={this._onLoadingFn}",
+      "            onScroll={this._scrollEventing}",
+      "          />"
+    ],
+    "description": "DYRefreshHeader"
+  },
+  "DYImageSequence": {
+    "prefix": "dy-imagesequence",
+    "body": [
+      "<ImageSequence",
+      "  images={images}",
+      "  startFrameIndex={0}",
+      "  loop={true}",
+      "  framesPerSecond={20}",
+      "  style={{width: 50, height: 50}} />"
+    ],
+    "description": "DYImageSequence"
+  },
+  "DYImage": {
+    "prefix": "dy-image",
+    "body": [
+      "<PlaceHolderImage style={{width: 200, height: 100, borderRadius: 15}}",
+      "  source={{uri: 'https://picsum.photos/1080?image=3'}}",
+      "  placeHolderPath={require('./test.png')}",
+      "  failerImagePath={require('./test2.png')}",
+      "  resizeMode={'cover'}",
+      "  activeOpacity={0.8}",
+      "  onPress={onPress}",
+      "  />"
+    ],
+    "description": "DYImage"
+  },
+  "DYSVGAPlayer": {
+    "prefix": "dy-svgaplayer",
+    "body": [
+      "  <DYSVGAPlayer",
+      "    style={styles.shark}",
+      "    source={svgaUrl}",
+      "    loops={-1}",
+      "    onFinished={() => {}}",
+      "  /> "
+    ],
+    "description": "DYSVGAPlayer"
+  },
+  "GifImage": {
+    "prefix": "dy-gifimage",
+    "body": [
+      "<GifImage",
+      "      style={[styles.emoticonBigImage]}",
+      "      source={bigEmoUri}",
+      "      onLoadEnd={() => alert(\"onLoadEnd\")}",
+      "  />"
+    ],
+    "description": "GifImage"
+  },
+  "DYDatePicker": {
+    "prefix": "dy-datepicker",
+    "body": [
+      " <DYDatePicker",
+      "   ref='DYDatePicker'",
+      "   onDateChoosed = {(year, month, day) => {",
+      "     alert(year + ` ` + month + ` ` + day)",
+      "   }}/>"
+    ],
+    "description": "DYDatePicker"
+  },
+  "DYActionSheet": {
+    "prefix": "dy-actionsheet",
+    "body": [
+      "<DYActionSheet",
+      "  ref='ActionSheet'",
+      "  title={'$1'}",
+      "  options={[ 'Cancel', 'OK']}",
+      "  message='test'",
+      "  onPress={handlePress}",
+      "  marginTop={44} />",
+      ""
+    ],
+    "description": "DYActionSheet"
+  },
+  "DYButton": {
+    "prefix": "dy-button",
+    "body": [
+      "<DYButton",
+      "      containerStyle={{",
+      "        width: 250,",
+      "        height: 45,",
+      "        borderRadius: 22.5,",
+      "        marginLeft: 10,",
+      "        marginTop: 30,",
+      "        backgroundColor: '#89916B',",
+      "        paddingHorizontal: 10 }",
+      "      }",
+      "      disabled",
+      "      disabledContainerStyle={{backgroundColor: 'grey'}}",
+      "      style={{fontSize: 20, color: 'white'}}",
+      "      onPress={handlePress}",
+      "    >",
+      "      Disabled",
+      "    </DYButton>"
+    ],
+    "description": "DYButton"
+  },
+  "DYCarousel": {
+    "prefix": "dy-carousel",
+    "body": [
+      "<DYCarousel ref='swiper'",
+      "        currentPage={0}",
+      "        isLooped={true}",
+      "        autoplay={true}",
+      "        style={{flex: 1}}",
+      "        bullets={true}",
+      "        delay={8000}",
+      "        contentContainerStyle={{flex: 1}}",
+      "        bulletsContainerStyle={{bottom: -10}}",
+      "        dot={<Image source={require('./image/swiper_dot.png')} style={styles.dotStyle}/>}",
+      "        activeDot={<Image source={require('./image…iper_dot_active.png')} style={styles.dotStyle}/>}",
+      "    >",
+      "     {children}",
+      "</DYCarousel>",
+      ""
+    ],
+    "description": "DYCarousel"
+  }
+}

@@ -54,12 +54,62 @@
           "name": "项目生成器"
         }
       ]
-    }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./src/snippets/react-native-components.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/react-native-components.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/react-native-components.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/react-native-components.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/react-native-style.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/react-native-style.json"
+      },
+      {
+        "language": "css",
+        "path": "./src/snippets/css.json"
+      },
+      {
+        "language": "scss",
+        "path": "./src/snippets/css.json"
+      }
+    ]
   },
   "scripts": {
     "preinstall": "only-allow yarn",
     "start": "ts-node src/index.ts",
-    "build": "tsc -p tsconfig.json && cp  src/*.png dist && cp -r src/gen-project/pages dist/src/gen-project",
+    "build": "tsc -p tsconfig.json && cp  src/*.png dist && cp -r src/snippets dist/src",
     "release": "standard-version"
   },
   "husky": {

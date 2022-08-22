@@ -1,0 +1,38 @@
+{
+  "Justify content": {
+    "prefix": "jcc",
+    "body": "justifyContent: 'center',"
+  },
+  "Justify content between": {
+    "prefix": "jcb",
+    "body": "justifyContent: 'space-between',"
+  },
+  "Align Items": {
+    "prefix": "aic",
+    "body": "alignItems: 'center',"
+  },
+  "Flex Direction": {
+    "prefix": "fdr",
+    "body": "flexDirection: 'row',"
+  },
+  "Position": {
+    "prefix": "pa",
+    "body": "position: 'absolute',"
+  },
+  "KeyValue": {
+    "prefix": "kv",
+    "body": "$1:{},"
+  },
+  "WH": {
+    "prefix": "wh",
+    "body": "width:$1,height:$1"
+  },
+  "FC": {
+    "prefix": "fc",
+    "body": "fontSize:$1,color:$2"
+  },
+  "BGC": {
+    "prefix": "bgc",
+    "body": "backgroundColor:'red'"
+  }
+}
