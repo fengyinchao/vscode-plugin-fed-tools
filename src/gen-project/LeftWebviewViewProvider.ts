@@ -1,6 +1,6 @@
 /*
- * @Description: LeftWebviewViewProvider 左侧 webview 容器
- * @Author: Feng Yinchao
+ * @description: LeftWebviewViewProvider 左侧 webview 容器
+ * @author: Feng Yinchao
  * @Date: 2022-02-11 13:51:09
  */
 import * as vscode from 'vscode';

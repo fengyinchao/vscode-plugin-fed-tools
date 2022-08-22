@@ -6,6 +6,7 @@
   "main": "dist/src/index.js",
   "publisher": "fengyinchao",
   "engines": {
+    "vscode": "^1.64.0",
     "node": ">=10.x"
   },
   "icon": "dist/fast.png",
