@@ -1,8 +1,8 @@
 {
-  "name": "fe-standard-config-seed",
+  "name": "vscode-plugin-fed-tools",
   "version": "0.0.1",
-  "displayName": "fe-standard-config-seed",
-  "description": "a seed with fe standard config",
+  "displayName": "vscode-plugin-fed-tools",
+  "description": "vscode-plugin-fed-tools",
   "main": "dist/src/index.js",
   "publisher": "fengyinchao",
   "engines": {
@@ -41,7 +41,7 @@
       "activitybar": [
         {
           "id": "douyu-fed",
-          "title": "斗鱼FED",
+          "title": "FED",
           "icon": "./dist/fast.png"
         }
       ]
@@ -84,7 +84,7 @@
     "tslib": "2.0.2"
   },
   "devDependencies": {
-    "@shark/eslint-config-fed": "1.1.7",
+    "@fengyinchao/eslint-config-fed": "1.0.2",
     "@types/node": "12.12.62",
     "@types/vscode": "^1.64.0",
     "concurrently": "5.3.0",
@@ -94,7 +94,7 @@
     "wait-on": "5.2.0",
     "@commitlint/cli": "9.1.2",
     "@commitlint/config-conventional": "12.1.4",
-    "@shark/eslint-plugin-fed": "1.0.3",
+    "@fengyinchao/eslint-plugin-custom": "0.0.6",
     "babel-eslint": "10.1.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
@@ -116,7 +116,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengyinchao/fe-standard-config-seed.git"
+    "url": "git+https://github.com/fengyinchao/vscode-plugin-fed-tools.git"
   },
   "keywords": [
     "standard",
@@ -129,7 +129,7 @@
   "author": "fengyinchao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fengyinchao/fe-standard-config-seed/issues"
+    "url": "https://github.com/fengyinchao/vscode-plugin-fed-tools/issues"
   },
-  "homepage": "https://github.com/fengyinchao/fe-standard-config-seed#readme"
+  "homepage": "https://github.com/fengyinchao/vscode-plugin-fed-tools#readme"
 }

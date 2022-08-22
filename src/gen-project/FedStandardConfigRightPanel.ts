@@ -81,7 +81,7 @@ export class FedStandardConfigRightPanel {
       return;
     }
 
-    const targetTemplatePath = path.resolve(workspaceUrl, 'node_modules', '@shark/eslint-config-fed');
+    const targetTemplatePath = path.resolve(workspaceUrl, 'node_modules', '@fengyinchao/eslint-config-fed');
 
     // Listen for when the panel is disposed
     // This happens when the user closes the panel or when the panel is closed programmatically
@@ -96,7 +96,7 @@ export class FedStandardConfigRightPanel {
           case 'generate-fed-standard-config':
             if (!fs.existsSync(targetTemplatePath)) {
               vscode.window.showErrorMessage(
-                '未找到 @shark/eslint-config-fed 包，请先在本项目下安装该包后重试 yarn add @shark/eslint-config-fed -D',
+                '未找到 @fengyinchao/eslint-config-fed 包，请先在本项目下安装该包后重试 yarn add @fengyinchao/eslint-config-fed -D',
               );
               return;
             }
@@ -148,14 +148,14 @@ export class FedStandardConfigRightPanel {
   extends: [
     ${
       data.language === 'JS'
-        ? '"@shark/eslint-config-fed/javascript-base"'
-        : '"@shark/eslint-config-fed/typescript-base"'
+        ? '"@fengyinchao/eslint-config-fed/javascript-base"'
+        : '"@fengyinchao/eslint-config-fed/typescript-base"'
     },
-    ${data.type === 'React' ? '"@shark/eslint-config-fed/react",' : ''}
-    ${data.type === 'RN' ? '"@shark/eslint-config-fed/react",' : ''}
-    ${data.type === 'RN' ? '"@shark/eslint-config-fed/rn",' : ''}
-    ${data.type === 'Vue' ? '"@shark/eslint-config-fed/vue",' : ''}
-    ${data.type === 'Node' ? '"@shark/eslint-config-fed/node",' : ''}
+    ${data.type === 'React' ? '"@fengyinchao/eslint-config-fed/react",' : ''}
+    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/react",' : ''}
+    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/rn",' : ''}
+    ${data.type === 'Vue' ? '"@fengyinchao/eslint-config-fed/vue",' : ''}
+    ${data.type === 'Node' ? '"@fengyinchao/eslint-config-fed/node",' : ''}
   ],
 };`;
             fs.writeFile(path.resolve(workspaceUrl, '.eslintrc.js'), contentTemplate, 'utf8', (err) => {

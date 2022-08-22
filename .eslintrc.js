@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@shark/eslint-config-fed/typescript-base', '@shark/eslint-config-fed/node'],
+  extends: ['@fengyinchao/eslint-config-fed/typescript-base', '@fengyinchao/eslint-config-fed/node'],
   rules: {
     'node/no-unsupported-features/es-syntax': 'off',
     'import/no-unresolved': [2, { ignore: ['vscode'] }],
