@@ -3,6 +3,17 @@
 ## 功能
 
 ### 代码规范可视化接入
+  ![](https://sta-op.douyucdn.cn/butterfly-java/2022/08/29/350e4c1e28dbbf4214ca60722726c7a9.png)
+
+可以一键接入如下规范：
+● ESLint 规范
+● Prettier 规范
+● EditorConfig 规范
+● StyleLint 规范
+● Commit Message 规范
+● 注释规范
+规范详情可参见：[](https://www.yuque.com/fengyinchao/awb51o/ksm7sc)
+
 
 ### snippets
 
@@ -27,7 +38,6 @@
 
 ### 小工具
 
-- ❌ 一键标准化(接入 TS、ESLint、Prettier、EditorConfig、StyleLint、Husky、Shark-Ci)
 - ❌ css to react-native style
 - ❌ json to ts interface
 - ...
@@ -45,12 +55,3 @@ https://marketplace.visualstudio.com/manage/publishers/fengyinchao
 # 查看应用市场
 https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categories&sortBy=Installs
 ```
-
-开发了一个 vscode 插件: fed-tools(可在 vscode 里搜索安装，安装成功后左侧面板有个闪电形状的图标)。目前集成了 RN 相关的一些 snippets，具体包含：
-
-1、@shark/react-native-component 组件自动完成和文档提示，快捷键 dy-；
-2、一键生成 RN 页面，快捷键 grnc
-3、ReactNative 原生组件输入提示，预填充 style 字段，快捷键 vs(View),ts(Text) 等
-4、ReactNative 样式代码提示，快捷键 jcc,jcb,aic,fdr 等
-
-欢迎大家使用和完善
