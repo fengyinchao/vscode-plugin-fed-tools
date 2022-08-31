@@ -1,5 +1,5 @@
 {
-  "gen component": {
+  "FYC_gen rn component": {
     "prefix": "grnc",
     "body": [
       "import React from 'react';",
@@ -15,51 +15,51 @@
     ],
     "description": "FYC_gen rn component"
   },
-  "gen list": {
+  "FYC_gen react native list": {
     "prefix": "grnl",
     "body": [
       "{$1.map((item, key) => <View key={$2} style={styles.$3}></View>)}"
     ],
     "description": "FYC_gen react native list"
   },
-  "View with style": {
+  "FYC_View with style": {
     "prefix": "vs",
     "body": ["<View style={styles.$1}></View>"],
     "description": "FYC_View with style"
   },
-  "Text with style": {
+  "FYC_Text with style": {
     "prefix": "ts",
     "body": ["<Text style={styles.$1}>{$2}</Text>"],
     "description": "FYC_Text with style"
   },
-  "Button with style": {
+  "FYC_Button with style": {
     "prefix": "bs",
     "body": ["<Button style={styles.$1} onPress={()=>{}></Button>"],
     "description": "FYC_Button with style"
   },
-  "Image with style": {
+  "FYC_Image with style": {
     "prefix": "ims",
     "body": ["<Image style={styles.$1} source={{uri:$2}} />"],
     "description": "FYC_Image with style"
   },
-  "ImageBackground with style": {
+  "FYC_ImageBackground with style": {
     "prefix": "imb",
     "body": [
       "<ImageBackground source={$1} resizeMode=\"contain\" style={styles.imgBg}></ImageBackground>"
     ],
     "description": "FYC_ImageBackground with style"
   },
-  "Create a TouchableOpacity element": {
+  "FYC_Create a TouchableOpacity element": {
     "prefix": "to",
     "body": ["<TouchableOpacity>", "\t$1", "</TouchableOpacity>"],
     "description": "FYC_Create a TouchableOpacity element."
   },
-  "Input": {
+  "FYC_Create a Input element.": {
     "prefix": "input",
     "body": ["<Input placeholder=\"$1\"/>"],
     "description": "FYC_Create a Input element."
   },
-  "ssc": {
+  "FYC_Create StyleSheet element.": {
     "prefix": "ssc",
     "body": [
       "import { StyleSheet } from 'react-native';",

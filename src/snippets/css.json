@@ -1,9 +1,9 @@
 {
-  "ellipsis": {
+  "单行文本超长截断": {
     "prefix": "ellipsis",
     "body": ".ellipsis{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}"
   },
-  "beforeafter": {
+  "beforeafter 伪元素": {
     "prefix": "ba",
     "body": "&:before,&:after{ content:''; position: absolute; left:0; transform: translateX(calc(50px - 50%)); } &:before{ content:'before'; } &:after{ content:'after'; height:30px; line-height: 30px; background-color: green; top:-40px; }"
   }

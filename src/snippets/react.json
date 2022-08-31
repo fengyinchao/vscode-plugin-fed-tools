@@ -1,65 +1,65 @@
 {
-  "useState": {
+  "FYC_useState": {
     "prefix": "us",
     "body": ["const [$1,set$1] = useState<$3>($2)"],
     "description": "FYC_useState"
   },
-  "useEffect": {
+  "FYC_useEffect": {
     "prefix": "ue",
     "body": ["useEffect(() => { $1 }, [])"],
     "description": "FYC_useEffect"
   },
-  "useCallback": {
+  "FYC_useCallback": {
     "prefix": "uc",
     "body": ["const $1 = useCallback(() => {$2}, [])"],
     "description": "FYC_useCallback"
   },
-  "TS-Props": {
+  "FYC_IProps": {
     "prefix": "ip",
     "body": ["type IProps = {$1}"],
     "description": "FYC_IProps"
   },
-  "TS-IState": {
+  "FYC_IState": {
     "prefix": "is",
     "body": ["interface IState{$}"],
     "description": "FYC_IState"
   },
-  "doc": {
+  "FYC_对象结构-常量": {
     "prefix": "doc",
     "body": ["const {$2} = $1"],
     "description": "FYC_对象结构-常量"
   },
-  "dol": {
+  "FYC_对象结构-变量": {
     "prefix": "dol",
     "body": ["let {$2} = $1"],
     "description": "FYC_对象结构-变量"
   },
-  "dal": {
+  "FYC_数组结构-变量": {
     "prefix": "dal",
     "body": ["let [$2] = $1"],
     "description": "FYC_数组结构-变量"
   },
-  "dac": {
+  "FYC_数组结构-常量": {
     "prefix": "dac",
     "body": ["const [$2] = $1"],
     "description": "FYC_数组结构-常量"
   },
-  "fd": {
+  "FYC_通用函数类型声明": {
     "prefix": "fd",
     "body": "(...args:any[])=>void",
     "description": "FYC_通用函数类型声明"
   },
-  "gen empty fun": {
+  "FYC_gen empty fun": {
     "prefix": "gef",
     "body": ["const $1 = () => null"],
     "description": "FYC_gen empty fun"
   },
-  "console": {
+  "FYC_console": {
     "prefix": "cl",
     "body": ["console.log('===$1',$1)"],
     "description": "FYC_console"
   },
-  "gen react component": {
+  "FYC_gen react component": {
     "prefix": "grc",
     "body": [
       "import * as React from 'react';",
@@ -74,7 +74,7 @@
     ],
     "description": "FYC_gen react component"
   },
-  "gen list": {
+  "FYC_gen react list": {
     "prefix": "grl",
     "body": [
       "{$1.map((item, key) => <div key={$2} className='$3'>$4</div>)}"

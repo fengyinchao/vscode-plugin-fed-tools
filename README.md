@@ -6,13 +6,20 @@
   ![](https://sta-op.douyucdn.cn/butterfly-java/2022/08/29/350e4c1e28dbbf4214ca60722726c7a9.png)
 
 可以一键接入如下规范：
+
 ● ESLint 规范
+
 ● Prettier 规范
+
 ● EditorConfig 规范
+
 ● StyleLint 规范
+
 ● Commit Message 规范
+
 ● 注释规范
-规范详情可参见：[](https://www.yuque.com/fengyinchao/awb51o/ksm7sc)
+
+规范详情可参见：[https://www.yuque.com/fengyinchao/awb51o/ksm7sc](https://www.yuque.com/fengyinchao/awb51o/ksm7sc)
 
 
 ### snippets
