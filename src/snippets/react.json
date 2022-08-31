@@ -1,80 +1,69 @@
 {
-  "gen component": {
-    "prefix": "gc",
-    "body": [
-      "import React from 'react';",
-      "import { View } from 'react-native'",
-      "import styles from './Style'",
-      "",
-      "type I$1Props = {};",
-      "",
-      "const $1 = (props: I$1Props) => {",
-      "return <View style={styles.container}></View>;",
-      "};",
-      "export default React.memo($1);"
-    ],
-    "description": "gen component"
+  "useState": {
+    "prefix": "us",
+    "body": ["const [$1,set$1] = useState<$3>($2)"],
+    "description": "FYC_useState"
   },
-  "gen react native component": {
-    "prefix": "grnc",
-    "body": [
-      "import React from 'react';",
-      "import { View, StyleSheet, Text } from 'react-native';",
-      "import { DYNavBar } from '@shark/react-native-base';",
-      "import { resize } from '../../../common/utils/resize';",
-      "import { PageStyle } from '../commonStyle';",
-      "import { NavigationScreenProps } from 'react-navigation';",
-      "import HeaderButton from '../component/HeaderRightButton';",
-      "",
-
-      "const styles = StyleSheet.create(resize({",
-      "container: PageStyle,",
-      "}));",
-      "",
-      "type INavagationProps = NavigationScreenProps<{",
-      "firstChannelId: number;",
-      "}>;",
-      "type I$1Props = INavagationProps;",
-      "",
-      "const $1 = (props: I$1Props) => {",
-      "return (",
-      "<View style={styles.container}>",
-      "<Text>hello</Text>",
-      "</View>",
-      ");",
-      "};",
-
-      "$1.navigationOptions = ({ navigation }:INavagationProps) => {",
-      "const enable = navigation.getParam('enable', '');",
-      "return {",
-      "header: DYNavBar.commonNavBar({",
-      "navigation,",
-      "title: '标题',",
-      "renderRight: () => {",
-      "return (",
-      " <HeaderButton",
-      "disabled={!enable}",
-      " onPress={() => {",
-      "navigation.goBack();",
-      "}}",
-      ">",
-      "<Text>完成</Text>",
-      "</HeaderButton>",
-      ");",
-      " },",
-      "}),",
-      "};",
-      "};",
-      "",
-      "export default $1;"
-    ],
-    "description": "gen react component"
+  "useEffect": {
+    "prefix": "ue",
+    "body": ["useEffect(() => { $1 }, [])"],
+    "description": "FYC_useEffect"
+  },
+  "useCallback": {
+    "prefix": "uc",
+    "body": ["const $1 = useCallback(() => {$2}, [])"],
+    "description": "FYC_useCallback"
+  },
+  "TS-Props": {
+    "prefix": "ip",
+    "body": ["type IProps = {$1}"],
+    "description": "FYC_IProps"
+  },
+  "TS-IState": {
+    "prefix": "is",
+    "body": ["interface IState{$}"],
+    "description": "FYC_IState"
+  },
+  "doc": {
+    "prefix": "doc",
+    "body": ["const {$2} = $1"],
+    "description": "FYC_对象结构-常量"
+  },
+  "dol": {
+    "prefix": "dol",
+    "body": ["let {$2} = $1"],
+    "description": "FYC_对象结构-变量"
+  },
+  "dal": {
+    "prefix": "dal",
+    "body": ["let [$2] = $1"],
+    "description": "FYC_数组结构-变量"
+  },
+  "dac": {
+    "prefix": "dac",
+    "body": ["const [$2] = $1"],
+    "description": "FYC_数组结构-常量"
+  },
+  "fd": {
+    "prefix": "fd",
+    "body": "(...args:any[])=>void",
+    "description": "FYC_通用函数类型声明"
+  },
+  "gen empty fun": {
+    "prefix": "gef",
+    "body": ["const $1 = () => null"],
+    "description": "FYC_gen empty fun"
+  },
+  "console": {
+    "prefix": "cl",
+    "body": ["console.log('===$1',$1)"],
+    "description": "FYC_console"
   },
   "gen react component": {
     "prefix": "grc",
     "body": [
       "import * as React from 'react';",
-      "import './$1.css';",
+      "import './$1.$2';",
       "",
       "type I$1Props = {};",
       "",
@@ -83,178 +72,13 @@
       "};",
       "export default React.memo($1);"
     ],
-    "description": "gen react component"
-  },
-  "gen style": {
-    "prefix": "gs",
-    "body": [
-      "import { StyleSheet } from 'react-native';",
-      "import { resize } from '../resize';",
-      "",
-      "export default StyleSheet.create(",
-      "resize({",
-      "container: {",
-      "flex: 1,",
-      "width: '100%',",
-      "backgroundColor:'green',",
-      "},",
-      " })",
-      ");"
-    ],
-    "description": "gen style"
+    "description": "FYC_gen react component"
   },
   "gen list": {
-    "prefix": "gl",
+    "prefix": "grl",
     "body": [
-      "{$1.map((item, key) => <View key={$2} style={styles.$3}></View>)}"
+      "{$1.map((item, key) => <div key={$2} className='$3'>$4</div>)}"
     ],
-    "description": "View with style"
+    "description": "FYC_gen react list"
   },
-  "gen empty fun": {
-    "prefix": "gf",
-    "body": ["()=>{}"],
-    "description": "gen empty fun"
-  },
-  "console": {
-    "prefix": "cl",
-    "body": ["console.log('===$1',$1)"],
-    "description": "console"
-  },
-  "View with style": {
-    "prefix": "vs",
-    "body": ["<View style={styles.$1}></View>"],
-    "description": "View with style"
-  },
-  "Text with style": {
-    "prefix": "ts",
-    "body": ["<Text style={styles.$1}>{$2}</Text>"],
-    "description": "Text with style"
-  },
-  "Button with style": {
-    "prefix": "bs",
-    "body": ["<Button style={styles.$1} onPress={()=>{}></Button>"],
-    "description": "Button with style"
-  },
-  "Image with style": {
-    "prefix": "ims",
-    "body": ["<Image style={styles.$1} source={{uri:$2}} />"],
-    "description": "Text with style"
-  },
-  "ImageBackground with style": {
-    "prefix": "imb",
-    "body": [
-      "<ImageBackground source={$1} resizeMode=\"contain\" style={styles.imgBg}></ImageBackground>"
-    ],
-    "description": "ImageBackground with style"
-  },
-  "Create a TouchableOpacity element": {
-    "prefix": "to",
-    "body": ["<TouchableOpacity>", "\t$1", "</TouchableOpacity>"],
-    "description": "Create a TouchableOpacity element."
-  },
-  "Input": {
-    "prefix": "input",
-    "body": ["<Input placeholder=\"$1\"/>"]
-  },
-
-  "ssc": {
-    "prefix": "ssc",
-    "body": [
-      "import { StyleSheet } from 'react-native';",
-      "",
-      "export default StyleSheet.create({",
-      "\t$1",
-      "});"
-    ]
-  },
-  "gft": {
-    "prefix": "gft",
-    "body": "(...args:any[])=>void"
-  },
-  "alert": {
-    "prefix": "al",
-    "body": "Alert.alert(JSON.stringify($1))"
-  },
-  "TS-Props": {
-    "prefix": "tp",
-    "body": ["type IProps = {$1}"],
-    "description": "IProps"
-  },
-  "TS-EProps": {
-    "prefix": "etp",
-    "body": ["export type IProps = {$1}"],
-    "description": "IProps"
-  },
-  "TS-IState": {
-    "prefix": "is",
-    "body": ["interface IState{$}"],
-    "description": "IState"
-  },
-  "TS-EIState": {
-    "prefix": "eis",
-    "body": ["export interface IState{$}"],
-    "description": "IState"
-  },
-  "odc": {
-    "prefix": "odc",
-    "body": ["const {$2} = $1"],
-    "description": "对象结构-常量"
-  },
-  "odl": {
-    "prefix": "odl",
-    "body": ["let {$2} = $1"],
-    "description": "对象结构-变量"
-  },
-  "adl": {
-    "prefix": "adl",
-    "body": ["let [$2] = $1"],
-    "description": "数组结构-变量"
-  },
-  "adc": {
-    "prefix": "adc",
-    "body": ["const [$2] = $1"],
-    "description": "数组结构-常量"
-  },
-  "hg": {
-    "prefix": "g",
-    "body": [
-      "httpRequestGet<T>(APIURL.editChannel, {})",
-      ".then(res => {",
-      "})",
-      ".catch(err => {",
-      "console.log('===err', err);",
-      "});"
-    ]
-  },
-  "hp": {
-    "prefix": "p",
-    "body": [
-      "httpRequestPost<T>(APIURL.editChannel, {},'post')",
-      ".then(res => {",
-      "})",
-      ".catch(err => {",
-      "console.log('===err', err);",
-      "});"
-    ]
-  },
-  "useState": {
-    "prefix": "us",
-    "body": ["const [$1,set$1] = useState($2)"],
-    "description": "useState"
-  },
-  "useEffect": {
-    "prefix": "ue",
-    "body": ["useEffect(() => { $1}, [])"],
-    "description": "useEffect"
-  },
-  "useEffectClear": {
-    "prefix": "ue",
-    "body": ["useEffect(() => { $1;return ()=>{}}, [])"],
-    "description": "useEffect"
-  },
-  "useCallback": {
-    "prefix": "uc",
-    "body": ["const $1 = useCallback(() => {$2}, [])"],
-    "description": "useCallback"
-  }
 }

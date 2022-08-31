@@ -58,19 +58,19 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./src/snippets/react-native-components.json"
+        "path": "./src/snippets/react-native.json"
       },
       {
         "language": "typescript",
-        "path": "./src/snippets/react-native-components.json"
+        "path": "./src/snippets/react-native.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./src/snippets/react-native-components.json"
+        "path": "./src/snippets/react-native.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./src/snippets/react-native-components.json"
+        "path": "./src/snippets/react-native.json"
       },
       {
         "language": "javascript",
@@ -98,6 +98,10 @@
       },
       {
         "language": "css",
+        "path": "./src/snippets/css.json"
+      },
+      {
+        "language": "less",
         "path": "./src/snippets/css.json"
       },
       {
