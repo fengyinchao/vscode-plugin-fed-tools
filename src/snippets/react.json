@@ -1,4 +1,14 @@
 {
+  "FYC_import_react": {
+    "prefix": "imr",
+    "body": ["import React from 'react';"],
+    "description": "FYC_import_react"
+  },
+  "FYC_import_react_api": {
+    "prefix": "imra",
+    "body": ["import { $1 } from 'react';"],
+    "description": "FYC_import_react_api"
+  },
   "FYC_useState": {
     "prefix": "us",
     "body": ["const [$1,set$1] = useState<$3>($2)"],
@@ -51,7 +61,7 @@
   },
   "FYC_gen empty fun": {
     "prefix": "gef",
-    "body": ["const $1 = () => null"],
+    "body": ["const $1 = () => { $2 }"],
     "description": "FYC_gen empty fun"
   },
   "FYC_console": {
@@ -77,7 +87,7 @@
   "FYC_gen react list": {
     "prefix": "grl",
     "body": [
-      "{$1.map((item, key) => <div key={$2} className='$3'>$4</div>)}"
+      "{$1.map((item, key) => <div key={key} className='$2'>$3</div>)}"
     ],
     "description": "FYC_gen react list"
   },

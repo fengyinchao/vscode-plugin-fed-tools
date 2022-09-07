@@ -1,6 +1,6 @@
 {
   "name": "vscode-plugin-fed-tools",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "displayName": "vscode-plugin-fed-tools",
   "description": "vscode-plugin-fed-tools",
   "main": "dist/src/index.js",
@@ -87,6 +87,14 @@
       {
         "language": "typescriptreact",
         "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/react-native-style.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/react-native-style.json"
       },
       {
         "language": "typescriptreact",

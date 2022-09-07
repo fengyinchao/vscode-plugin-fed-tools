@@ -1,4 +1,9 @@
 {
+  "FYC_import_react_native_api": {
+    "prefix": "imra",
+    "body": ["import { View,Text,Image,ImageBackground,TouchableOpacity,StyleSheet } from 'react-native';"],
+    "description": "FYC_import_react_api"
+  },
   "FYC_gen rn component": {
     "prefix": "grnc",
     "body": [
@@ -18,7 +23,7 @@
   "FYC_gen react native list": {
     "prefix": "grnl",
     "body": [
-      "{$1.map((item, key) => <View key={$2} style={styles.$3}></View>)}"
+      "{$1.map((item, key) => <View key={key} style={styles.$3}></View>)}"
     ],
     "description": "FYC_gen react native list"
   },
@@ -42,6 +47,11 @@
     "body": ["<Image style={styles.$1} source={{uri:$2}} />"],
     "description": "FYC_Image with style"
   },
+  "FYC_Image with style2": {
+    "prefix": "ims2",
+    "body": ["<Image style={styles.$1} source={require('$2')} />"],
+    "description": "FYC_Image with style"
+  },
   "FYC_ImageBackground with style": {
     "prefix": "imb",
     "body": [
@@ -51,7 +61,7 @@
   },
   "FYC_Create a TouchableOpacity element": {
     "prefix": "to",
-    "body": ["<TouchableOpacity>", "\t$1", "</TouchableOpacity>"],
+    "body": ["<TouchableOpacity style={styles.$1} onPress={handlePress}>", "\t$2", "</TouchableOpacity>"],
     "description": "FYC_Create a TouchableOpacity element."
   },
   "FYC_Create a Input element.": {
