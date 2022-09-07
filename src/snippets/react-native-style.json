@@ -1,4 +1,72 @@
 {
+  "top bottom layout": {
+    "prefix": "tb",
+    "body": "top:{},bottom:{}"
+  },
+  "left right layout": {
+    "prefix": "lr",
+    "body": "left:{},right:{}"
+  },
+  "border": {
+    "prefix": "bor",
+    "body": "borderWidth: $1,borderColor:$2"
+  },
+  "borderRadius": {
+    "prefix": "bdrs",
+    "body": "borderRadius: $1,"
+  },
+  "textAlign": {
+    "prefix": "tac",
+    "body": "textAlign: 'center',"
+  },
+  "marginBottom": {
+    "prefix": "mb",
+    "body": "marginBottom: $1,"
+  },
+  "marginTop": {
+    "prefix": "mt",
+    "body": "marginTop: $1,"
+  },
+  "marginLeft": {
+    "prefix": "ml",
+    "body": "marginLeft: $1,"
+  },
+  "marginRight": {
+    "prefix": "mr",
+    "body": "marginRight: $1,"
+  },
+  "paddingBottom": {
+    "prefix": "pb",
+    "body": "paddingBottom: $1,"
+  },
+  "paddingTop": {
+    "prefix": "pt",
+    "body": "paddingTop: $1,"
+  },
+  "paddingLeft": {
+    "prefix": "pl",
+    "body": "paddingLeft: $1,"
+  },
+  "paddingRight": {
+    "prefix": "pr",
+    "body": "paddingRight: $1,"
+  },
+  "paddingHorizontal": {
+    "prefix": "ph",
+    "body": "paddingHorizontal: $1,"
+  },
+  "paddingVertical": {
+    "prefix": "pv",
+    "body": "paddingVertical: $1,"
+  },
+  "marginHorizontal": {
+    "prefix": "mh",
+    "body": "marginHorizontal: $1,"
+  },
+  "marginVertical": {
+    "prefix": "mv",
+    "body": "marginVertical: $1,"
+  },
   "Justify content": {
     "prefix": "jcc",
     "body": "justifyContent: 'center',"
@@ -17,11 +85,11 @@
   },
   "Position": {
     "prefix": "pa",
-    "body": "position: 'absolute',"
+    "body": "position: 'absolute', top:0,left:0,right:0,bottom:0"
   },
   "KeyValue": {
     "prefix": "kv",
-    "body": "$1:{},"
+    "body": "$1:{$2},"
   },
   "WH": {
     "prefix": "wh",
@@ -29,7 +97,7 @@
   },
   "FC": {
     "prefix": "fc",
-    "body": "fontSize:$1,color:$2"
+    "body": "fontSize:$1,color:$2,fontWeight: '400',"
   },
   "BGC": {
     "prefix": "bgc",

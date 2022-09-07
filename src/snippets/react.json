@@ -86,9 +86,17 @@
   },
   "FYC_gen react list": {
     "prefix": "grl",
-    "body": [
-      "{$1.map((item, key) => <div key={key} className='$2'>$3</div>)}"
-    ],
+    "body": ["{$1.map((item, key) => <div key={key} className='$2'>$3</div>)}"],
     "description": "FYC_gen react list"
   },
+  "FYC_gen react top bottom layout": {
+    "prefix": "gtb",
+    "body": ["<div className={styles.top}>$1</div>", "<div className={styles.bottom}>$2</div>"],
+    "description": "FYC_gen react top bottom layout"
+  },
+  "FYC_gen react left right layout": {
+    "prefix": "gtb",
+    "body": ["<div className={styles.left}>$1</div>", "<div className={styles.right}>$2</div>"],
+    "description": "FYC_gen react left right layout"
+  }
 }

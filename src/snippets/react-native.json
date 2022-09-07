@@ -22,9 +22,7 @@
   },
   "FYC_gen react native list": {
     "prefix": "grnl",
-    "body": [
-      "{$1.map((item, key) => <View key={key} style={styles.$3}></View>)}"
-    ],
+    "body": ["{$1.map((item, key) => <View key={key} style={styles.$3}></View>)}"],
     "description": "FYC_gen react native list"
   },
   "FYC_View with style": {
@@ -54,9 +52,7 @@
   },
   "FYC_ImageBackground with style": {
     "prefix": "imb",
-    "body": [
-      "<ImageBackground source={$1} resizeMode=\"contain\" style={styles.imgBg}></ImageBackground>"
-    ],
+    "body": ["<ImageBackground source={$1} resizeMode=\"contain\" style={styles.imgBg}></ImageBackground>"],
     "description": "FYC_ImageBackground with style"
   },
   "FYC_Create a TouchableOpacity element": {
@@ -71,13 +67,17 @@
   },
   "FYC_Create StyleSheet element.": {
     "prefix": "ssc",
-    "body": [
-      "import { StyleSheet } from 'react-native';",
-      "",
-      "export default StyleSheet.create({",
-      "\t$1",
-      "});"
-    ],
+    "body": ["import { StyleSheet } from 'react-native';", "", "export default StyleSheet.create({", "\t$1", "});"],
     "description": "FYC_Create StyleSheet element."
+  },
+  "FYC_gen rn top bottom layout": {
+    "prefix": "gtb",
+    "body": ["<View className={styles.top}>$1</View>", "<View className={styles.bottom}>$2</View>"],
+    "description": "FYC_gen rn top bottom layout"
+  },
+  "FYC_gen rn left right layout": {
+    "prefix": "gtb",
+    "body": ["<View className={styles.left}>$1</View>", "<View className={styles.right}>$2</View>"],
+    "description": "FYC_gen rn left right layout"
   }
 }
