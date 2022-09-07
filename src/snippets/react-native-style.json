@@ -1,10 +1,10 @@
 {
   "top bottom layout": {
-    "prefix": "tb",
+    "prefix": "tbrn",
     "body": "top:{},bottom:{}"
   },
   "left right layout": {
-    "prefix": "lr",
+    "prefix": "lrrn",
     "body": "left:{},right:{}"
   },
   "border": {

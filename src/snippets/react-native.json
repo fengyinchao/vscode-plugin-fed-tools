@@ -71,13 +71,13 @@
     "description": "FYC_Create StyleSheet element."
   },
   "FYC_gen rn top bottom layout": {
-    "prefix": "gtb",
-    "body": ["<View className={styles.top}>$1</View>", "<View className={styles.bottom}>$2</View>"],
+    "prefix": "gtbrn",
+    "body": ["<View style={styles.top}>$1</View>", "<View style={styles.bottom}>$2</View>"],
     "description": "FYC_gen rn top bottom layout"
   },
   "FYC_gen rn left right layout": {
-    "prefix": "gtb",
-    "body": ["<View className={styles.left}>$1</View>", "<View className={styles.right}>$2</View>"],
+    "prefix": "glrrn",
+    "body": ["<View style={styles.left}>$1</View>", "<View style={styles.right}>$2</View>"],
     "description": "FYC_gen rn left right layout"
   }
 }

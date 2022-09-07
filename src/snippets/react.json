@@ -95,7 +95,7 @@
     "description": "FYC_gen react top bottom layout"
   },
   "FYC_gen react left right layout": {
-    "prefix": "gtb",
+    "prefix": "glr",
     "body": ["<div className={styles.left}>$1</div>", "<div className={styles.right}>$2</div>"],
     "description": "FYC_gen react left right layout"
   }
