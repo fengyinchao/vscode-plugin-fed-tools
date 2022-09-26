@@ -151,11 +151,11 @@ export class FedStandardConfigRightPanel {
         ? '"@fengyinchao/eslint-config-fed/javascript-base"'
         : '"@fengyinchao/eslint-config-fed/typescript-base"'
     },
-    ${data.type === 'React' ? '"@fengyinchao/eslint-config-fed/react",' : ''}
-    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/react",' : ''}
-    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/rn",' : ''}
-    ${data.type === 'Vue' ? '"@fengyinchao/eslint-config-fed/vue",' : ''}
-    ${data.type === 'Node' ? '"@fengyinchao/eslint-config-fed/node",' : ''}
+    ${data.type === 'React' ? '"@fengyinchao/eslint-config-fed/react",' : null}
+    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/react",' : null}
+    ${data.type === 'RN' ? '"@fengyinchao/eslint-config-fed/rn",' : null}
+    ${data.type === 'Vue' ? '"@fengyinchao/eslint-config-fed/vue",' : null}
+    ${data.type === 'Node' ? '"@fengyinchao/eslint-config-fed/node",' : null}
   ],
 };`;
             fs.writeFile(path.resolve(workspaceUrl, '.eslintrc.js'), contentTemplate, 'utf8', (err) => {

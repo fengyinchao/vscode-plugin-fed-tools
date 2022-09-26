@@ -1,6 +1,6 @@
 {
   "name": "vscode-plugin-fed-tools",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "displayName": "vscode-plugin-fed-tools",
   "description": "vscode-plugin-fed-tools",
   "main": "dist/src/index.js",
