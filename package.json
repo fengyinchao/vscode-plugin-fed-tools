@@ -1,6 +1,6 @@
 {
   "name": "vscode-plugin-fed-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "vscode-plugin-fed-tools",
   "description": "vscode-plugin-fed-tools",
   "main": "dist/src/index.js",
@@ -121,7 +121,7 @@
   "scripts": {
     "preinstall": "only-allow yarn",
     "start": "ts-node src/index.ts",
-    "build": "tsc -p tsconfig.json && cp  src/*.png dist && cp -r src/snippets dist/src",
+    "build": "tsc -p tsconfig.json && cp  src/*.png dist && cp -r src/snippets dist/src && cp -r src/gen-project/pages dist/src/gen-project/pages",
     "release": "standard-version"
   },
   "husky": {
